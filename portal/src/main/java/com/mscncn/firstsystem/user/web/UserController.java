@@ -92,4 +92,10 @@ public class UserController {
 		userService.reSetPassword(user);
 		return "success";
 	}
+	@RequestMapping(value = { "/update" }, method = RequestMethod.POST)
+	@ResponseBody
+	public Object update(UserDetail user) {
+		userService.update(user);
+		return "success";
+	}
 }

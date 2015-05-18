@@ -92,6 +92,8 @@ public class UserServiceImpl implements UserService {
 		if (!StringUtils.isEmpty(userDetail.getPassword())) {
 			PasswordHelper.reSetPassword(userDetail);
 		}
+		userDao.update(userDetail);
+		userDetailDao.update(userDetail);
 	}
 
 }

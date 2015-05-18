@@ -76,4 +76,14 @@ public class UserServiceImplTest extends SpringTestBase {
 		user.setSalt("md5");
 		userService.reSetPassword(user);
 	}
+	@Test
+	public void updateTest(){
+		UserDetail user=new UserDetail();
+		user.setUserId(1+"");
+		user.setSalt("zssss");
+		user.setPassword("222");
+		user.setPhone("13333333333");
+		userService.update(user);
+		
+	}
 }

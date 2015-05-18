@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="1" time="0.269" errors="1" skipped="0" tests="8" name="com.mscncn.firstsystem.user.service.UserServiceImplTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="24.51-b03"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/king-pan/git/portal/portal"/>
+    <property name="java.runtime.version" value="1.7.0_51-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/ff/gg7_gshx3sz_2p6qht6f9g_40000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/king-pan/Documents/workspace-sts-3.6.4.RELEASE/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf4642825192209942036.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/king-pan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.10.3"/>
+    <property name="http.nonProxyHosts" value="local„ÄÅ169.254/16|*.local„ÄÅ169.254/16"/>
+    <property name="user.home" value="/Users/king-pan"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="king-pan"/>
+    <property name="java.class.path" value="/Users/king-pan/software/sts-bundle/sts-3.6.4.RELEASE/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_51"/>
+    <property name="java.ext.dirs" value="/Users/king-pan/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/king-pan/git/portal/portal/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local„ÄÅ169.254/16|*.local„ÄÅ169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local„ÄÅ169.254/16|*.local„ÄÅ169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.138" classname="com.mscncn.firstsystem.user.service.UserServiceImplTest" name="testSaveUserDetail"/>
+  <testcase time="0.02" classname="com.mscncn.firstsystem.user.service.UserServiceImplTest" name="getUserDetailTestNull"/>
+  <testcase time="0.014" classname="com.mscncn.firstsystem.user.service.UserServiceImplTest" name="reSetPasswdTest"/>
+  <testcase time="0.023" classname="com.mscncn.firstsystem.user.service.UserServiceImplTest" name="getUserDetailTest"/>
+  <testcase time="0.029" classname="com.mscncn.firstsystem.user.service.UserServiceImplTest" name="pageListTest">
+    <failure message="expected same:&lt;3&gt; was not:&lt;2&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected same:&lt;3&gt; was not:&lt;2&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotSame(Assert.java:737)
+	at org.junit.Assert.assertSame(Assert.java:680)
+	at org.junit.Assert.assertSame(Assert.java:691)
+	at com.mscncn.firstsystem.user.service.UserServiceImplTest.pageListTest(UserServiceImplTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>DEBUG: org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mscncn.firstsystem.user.service.UserServiceImplTest]
+DEBUG: org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mscncn.firstsystem.user.service.UserServiceImplTest]
+DEBUG: org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@c6ac24, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]].
+DEBUG: org.springframework.test.context.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+DEBUG: org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator - Creating implicit proxy for bean &apos;userServiceImpl&apos; with 0 common interceptors and 2 specific interceptors
+DEBUG: org.springframework.aop.framework.CglibAopProxy - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.mscncn.firstsystem.user.service.impl.UserServiceImpl@734f6fe1]
+DEBUG: org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator - Creating implicit proxy for bean &apos;com.mscncn.firstsystem.user.service.UserServiceImplTest&apos; with 0 common interceptors and 2 specific interceptors
+DEBUG: org.springframework.aop.framework.CglibAopProxy - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.mscncn.firstsystem.user.service.UserServiceImplTest@c6ac24]
+DEBUG: org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method &apos;UserServiceImplTest.pageListTest&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+DEBUG: org.springframework.test.context.transaction.TransactionalTestExecutionListener - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;] found for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@c6ac24, testMethod = pageListTest@UserServiceImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+DEBUG: org.springframework.test.context.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Creating new transaction with name [pageListTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543] for JDBC transaction
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543] to manual commit
+DEBUG: org.springframework.test.context.transaction.TransactionalTestExecutionListener - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@c6ac24, testMethod = pageListTest@UserServiceImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+INFO : org.springframework.test.context.transaction.TransactionalTestExecutionListener - Began transaction (5) for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@c6ac24, testMethod = pageListTest@UserServiceImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@371faa4e]; rollback [true]
+DEBUG: org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+DEBUG: org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a3c0970]
+DEBUG: org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543] will be managed by Spring
+INFO : com.mscncn.firstsystem.common.mybatis.pagination.PageInterceptor - [--&lt;&gt;????&lt;&gt;--]:????????SQL:select count(*) from s_user t,s_user_detail d 
+		where t.user_id=d.user_id
+DEBUG: com.mscncn.firstsystem.user.dao.UserDao.getList - ==&gt;  Preparing: select count(*) from s_user t,s_user_detail d where t.user_id=d.user_id 
+DEBUG: com.mscncn.firstsystem.user.dao.UserDao.getList - ==&gt; Parameters: 
+INFO : com.mscncn.firstsystem.common.mybatis.pagination.PageInterceptor - [--&lt;&gt;????&lt;&gt;--]:????????:3
+INFO : com.mscncn.firstsystem.common.mybatis.pagination.MySQLStrategy - [--&lt;&gt;????&lt;&gt;--]:??Mysql?????:select 
+			t.user_id as userId,
+			t.username as userName,
+			t.locked as locked,
+			d.real_name as realName,
+	        d.email as email,
+	        d.phone as phone,
+	        d.create_time as createTime,
+	        d.last_login_time as lastLoginTime
+		from s_user t,s_user_detail d 
+		where t.user_id=d.user_id limit 0,5
+DEBUG: com.mscncn.firstsystem.user.dao.UserDao.getList - ==&gt;  Preparing: select t.user_id as userId, t.username as userName, t.locked as locked, d.real_name as realName, d.email as email, d.phone as phone, d.create_time as createTime, d.last_login_time as lastLoginTime from s_user t,s_user_detail d where t.user_id=d.user_id limit 0,5 
+DEBUG: com.mscncn.firstsystem.user.dao.UserDao.getList - ==&gt; Parameters: 
+DEBUG: com.mscncn.firstsystem.user.dao.UserDao.getList - &lt;==      Total: 3
+DEBUG: org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a3c0970]
+GridPageBean [total=3, rows=[UserDetail [realName=king, email=pwpw1218@126.com, phone=18171204445, createTime=2015-03-21, lastLoginTime=null, userId=1, userName=admin], UserDetail [realName=null, email=pwpw12111@ww.cm, phone=null, createTime=2015-05-05, lastLoginTime=2015-05-05, userId=11, userName=afd66], UserDetail [realName=king, email=pwpw1218@126.com, phone=18171204445, createTime=2015-03-21, lastLoginTime=null, userId=2, userName=sysadmin]]]
+DEBUG: org.springframework.test.context.transaction.TransactionalTestExecutionListener - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@c6ac24, testMethod = pageListTest@UserServiceImplTest, testException = java.lang.AssertionError: expected same:&lt;3&gt; was not:&lt;2&gt;, mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+DEBUG: org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a3c0970]
+DEBUG: org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a3c0970]
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Initiating transaction rollback
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543]
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543] after transaction
+DEBUG: org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+INFO : org.springframework.test.context.transaction.TransactionalTestExecutionListener - Rolled back transaction after test execution for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@c6ac24, testMethod = pageListTest@UserServiceImplTest, testException = java.lang.AssertionError: expected same:&lt;3&gt; was not:&lt;2&gt;, mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+DEBUG: org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@c6ac24, testMethod = pageListTest@UserServiceImplTest, testException = java.lang.AssertionError: expected same:&lt;3&gt; was not:&lt;2&gt;, mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+</system-out>
+  </testcase>
+  <testcase time="0.013" classname="com.mscncn.firstsystem.user.service.UserServiceImplTest" name="updateTest">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at org.apache.shiro.codec.CodecSupport.toBytes(CodecSupport.java:92)
+	at org.apache.shiro.codec.CodecSupport.toBytes(CodecSupport.java:78)
+	at org.apache.shiro.util.SimpleByteSource.&lt;init&gt;(SimpleByteSource.java:74)
+	at org.apache.shiro.util.ByteSource$Util.bytes(ByteSource.java:104)
+	at com.mscncn.firstsystem.common.PasswordHelper.reSetPassword(PasswordHelper.java:1)
+	at com.mscncn.firstsystem.user.service.impl.UserServiceImpl.update(UserServiceImpl.java:93)
+	at com.mscncn.firstsystem.user.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$c083ade4.invoke(&lt;generated&gt;)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:708)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:644)
+	at com.mscncn.firstsystem.user.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$8cfa366f.update(&lt;generated&gt;)
+	at com.mscncn.firstsystem.user.service.UserServiceImplTest.updateTest(UserServiceImplTest.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>DEBUG: org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mscncn.firstsystem.user.service.UserServiceImplTest]
+DEBUG: org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mscncn.firstsystem.user.service.UserServiceImplTest]
+DEBUG: org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@3c116de6, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]].
+DEBUG: org.springframework.test.context.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+DEBUG: org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator - Creating implicit proxy for bean &apos;userServiceImpl&apos; with 0 common interceptors and 2 specific interceptors
+DEBUG: org.springframework.aop.framework.CglibAopProxy - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.mscncn.firstsystem.user.service.impl.UserServiceImpl@1c4635d9]
+DEBUG: org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator - Creating implicit proxy for bean &apos;com.mscncn.firstsystem.user.service.UserServiceImplTest&apos; with 0 common interceptors and 2 specific interceptors
+DEBUG: org.springframework.aop.framework.CglibAopProxy - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.mscncn.firstsystem.user.service.UserServiceImplTest@3c116de6]
+DEBUG: org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method &apos;UserServiceImplTest.updateTest&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+DEBUG: org.springframework.test.context.transaction.TransactionalTestExecutionListener - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;] found for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@3c116de6, testMethod = updateTest@UserServiceImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+DEBUG: org.springframework.test.context.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Creating new transaction with name [updateTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543] for JDBC transaction
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543] to manual commit
+DEBUG: org.springframework.test.context.transaction.TransactionalTestExecutionListener - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@3c116de6, testMethod = updateTest@UserServiceImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+INFO : org.springframework.test.context.transaction.TransactionalTestExecutionListener - Began transaction (6) for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@3c116de6, testMethod = updateTest@UserServiceImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@371faa4e]; rollback [true]
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Participating in existing transaction
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Participating transaction failed - marking existing transaction as rollback-only
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Setting JDBC transaction [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543] rollback-only
+DEBUG: org.springframework.test.context.transaction.TransactionalTestExecutionListener - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@3c116de6, testMethod = updateTest@UserServiceImplTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Initiating transaction rollback
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543]
+DEBUG: org.springframework.jdbc.datasource.DataSourceTransactionManager - Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6e00c543] after transaction
+DEBUG: org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+INFO : org.springframework.test.context.transaction.TransactionalTestExecutionListener - Rolled back transaction after test execution for test context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@3c116de6, testMethod = updateTest@UserServiceImplTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+DEBUG: org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@5319fe97 testClass = UserServiceImplTest, testInstance = com.mscncn.firstsystem.user.service.UserServiceImplTest@3c116de6, testMethod = updateTest@UserServiceImplTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@6c4f37b3 testClass = UserServiceImplTest, locations = &apos;{classpath:spring/*.service.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+</system-out>
+  </testcase>
+  <testcase time="0.02" classname="com.mscncn.firstsystem.user.service.UserServiceImplTest" name="test"/>
+  <testcase time="0.012" classname="com.mscncn.firstsystem.user.service.UserServiceImplTest" name="testConfig"/>
+</testsuite>
