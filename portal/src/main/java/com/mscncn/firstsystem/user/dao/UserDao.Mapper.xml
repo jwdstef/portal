@@ -94,7 +94,11 @@
     	</if>
 	</select>
 	<delete id="deleteUser" parameterType="java.lang.String">
-		delete from s_user where user_id=#{userId}
+		delete from s_user where user_id in 
+		<foreach collection="array" item="id" open="(" close=")">
+			#{id}
+		</foreach>
+		{userId}
 	</delete>
 	<update id="reSetPassword" parameterType="UserDetail">
 		update s_user set password=#{password} where user_id=#{userId}

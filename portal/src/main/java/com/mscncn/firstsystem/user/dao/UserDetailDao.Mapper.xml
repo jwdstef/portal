@@ -27,7 +27,10 @@
     	</if>
 	</select>
 	<delete id="deleteUserDetail" parameterType="java.lang.String">
-		delete from s_user_detail where user_id=#{userId}
+		delete from s_user_detail where user_id in
+		<foreach collection="array" item="id" open="(" close=")">
+			#{id}
+		</foreach>
 	</delete>
 	<update id="update" parameterType="UserDetail">
 		update s_user_detail

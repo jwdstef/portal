@@ -47,6 +47,7 @@ $(function() {
 			handler : function() {
 				initDialog();
 				$("#userDeditDialog").dialog({
+					title:'用户新增页面',
 					closed:false
 				});
 			}
@@ -56,7 +57,14 @@ $(function() {
 			handler : function() {
 				var rows = $("#userDataGrid").datagrid("getSelections");
 				if(rows.length>0){
-					
+					var ids="";
+					$.each(rows,function(n,row){
+						ids=ids+row.userId+",";
+						alert(row.userId);
+					});
+					$.post("../user/delete",{'ids':ids},function(data){
+						alert(data);
+					});
 				}
 			}
 		},'-', {
@@ -69,6 +77,7 @@ $(function() {
 				}else{
 					$("#userDeditDialog").dialog({title:'用户修改页面'}).dialog('open');
 					$("#userId").val(rows[0].userId);
+					$("#locked").combobox("setValue",rows[0].locked)
 					console.log(rows[0].userId);
 					$("#userName").val(rows[0].userName);
 					$("#userName").attr("readonly",true);
@@ -137,7 +146,7 @@ $(function() {
 	    },    
 	    success:function(data){   
 	    	if(data){
-	    		$.messager.alert("提示", "密码重置成功", "info");
+	    		$.messager.alert("提示", "用户信息添加成功", "info");
 	    		$("#userDeditDialog").dialog('close');
 	    		$("#userDataGrid").datagrid('load');  
 		    	$("#userSaveForm").form('clear');
@@ -155,6 +164,14 @@ function initUpdateDialog(){
 	$("#email").validatebox({    
 	    validType: 'email'   
 	}); 
+	$("#password").validatebox({    
+	    required: false,    
+	    validType: 'length[10,50]'   
+	}); 
+	$("#rePassword").validatebox({    
+	    required: false,    
+	    validType: "equals['#password']"   
+	});
 	$('#userSaveForm').form({   
 		url:'../user/update',
 		type:'post',
@@ -174,6 +191,8 @@ function initUpdateDialog(){
 }
 //新增初始化对话框
 function initDialog(){
+	$("#locked").combobox("setValue",false);
+	$("#userName").attr("readonly",false);
 	$("#userName").validatebox({    
 	    required: true,    
 	    validType: 'length[10,50]'
