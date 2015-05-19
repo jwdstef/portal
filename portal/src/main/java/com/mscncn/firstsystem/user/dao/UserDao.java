@@ -13,7 +13,7 @@ public interface UserDao {
 
 	void save(User user);
 
-	void deleteUser(@Param("userId") String userId);
+	void deleteUser(String[] userIds);
 
 	Integer getId();
 

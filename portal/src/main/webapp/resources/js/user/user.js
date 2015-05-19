@@ -59,11 +59,18 @@ $(function() {
 				if(rows.length>0){
 					var ids="";
 					$.each(rows,function(n,row){
-						ids=ids+row.userId+",";
-						alert(row.userId);
+						ids=ids+row.userId;
+						if(rows.length!=n+1){
+							ids=ids+",";
+						}
 					});
 					$.post("../user/delete",{'ids':ids},function(data){
-						alert(data);
+						if(data){
+							$.messager.alert("提示", "删除用户成功", "info");
+							$("#userDataGrid").datagrid('load');
+						}else{
+							$.messager.alert("提示", "删除用户失败", "error");
+						}
 					});
 				}
 			}

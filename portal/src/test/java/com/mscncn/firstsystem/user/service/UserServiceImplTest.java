@@ -89,4 +89,9 @@ public class UserServiceImplTest extends SpringTestBase {
 		userService.update(user);
 		
 	}
+	@Test
+	public void deleteTest(){
+		String[] ids={"3","4","5"};
+		userService.deleteUser(ids);
+	}
 }

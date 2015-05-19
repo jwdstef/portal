@@ -1,6 +1,5 @@
 package com.mscncn.firstsystem.user.web;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -102,9 +101,7 @@ public class UserController {
 	@RequestMapping(value={"/delete"},method=RequestMethod.POST)
 	@ResponseBody
 	public Object delete(String[] ids){
-		for(int i=0;i<ids.length;i++){
-			System.out.println(ids[i]);
-		}
+		userService.deleteUser(ids);
 		return "success";
 	}
 }

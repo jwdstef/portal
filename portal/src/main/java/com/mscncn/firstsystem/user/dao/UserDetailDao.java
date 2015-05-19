@@ -1,7 +1,5 @@
 package com.mscncn.firstsystem.user.dao;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.mscncn.firstsystem.user.model.UserDetail;
 
 public interface UserDetailDao {
@@ -10,5 +8,5 @@ public interface UserDetailDao {
 
 	void update(UserDetail userDetail);
 
-	void deleteUserDetail(@Param("userId") String userId);
+	void deleteUserDetail(String[] userId);
 }

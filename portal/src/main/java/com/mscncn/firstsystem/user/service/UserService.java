@@ -23,7 +23,7 @@ public interface UserService {
 
 	void saveUserDetail(UserDetail user);
 
-	void deleteUser(String id);
+	void deleteUser(String[] ids);
 
 	void reSetPassword(User user);
 
