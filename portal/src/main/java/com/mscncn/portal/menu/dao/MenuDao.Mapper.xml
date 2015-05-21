@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper 
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<!-- 这里namespace必须是PostsMapper接口的路径，不然要运行的时候要报错 “is not known to the MapperRegistry”--> 
+<mapper namespace="com.mscncn.portal.menu.dao.MenuDao"> 
+	<select id="findRootMenu" resultType="Menu">
+		select 
+			t.id as id,
+			t.text as text,
+			t.iconCls as iconCls,
+			t.parent_id as parentId,
+			t.order_value as orderValue,
+			t.url as 'attributes.url' 
+		from s_menu t where t.parent_id is null
+	</select>
+	<select id="findChirderById" parameterType="java.lang.Integer"
+		resultType="Menu">
+		select 
+			t.id as id,
+			t.text as text,
+			t.iconCls as iconCls,
+			t.parent_id as parentId,
+			t.order_value as orderValue,
+			t.url as 'attributes.url'
+		from s_menu t 
+		<where>
+			<if test="parentId!=null">
+			 	t.parent_id=#{parentId}
+			</if>
+		</where>
+		order by  t.order_value
+	</select>
+	<select id="findAllGridMenu" resultType="GridMenu">
+		select 
+			t.id as id,
+			t.text as text,
+			t.iconCls as iconCls,
+			t.parent_id as parentId,
+			t.order_value as orderValue,
+			t.url as url
+		from s_menu t order by id,t.order_value
+	</select>
+</mapper>

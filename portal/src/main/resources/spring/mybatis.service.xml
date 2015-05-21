@@ -32,27 +32,27 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
-		<property name="mapperLocations" value="classpath*:com/mscncn/firstsystem/**/*.Mapper.xml" />
+		<property name="mapperLocations" value="classpath*:com/mscncn/portal/**/*.Mapper.xml" />
 		<property name="typeAliasesPackage">
 			<!-- 多个包路径以逗号或者分号分割 -->
 			<value>
-				com.mscncn.firstsystem.user.model;
-				com.mscncn.firstsystem.dict.model;
-				com.mscncn.firstsystem.menu.model;
-				com.mscncn.firstsystem.common.mybatis.pagination
+				com.mscncn.portal.user.model;
+				com.mscncn.portal.dict.model;
+				com.mscncn.portal.menu.model;
+				com.mscncn.portal.common.mybatis.pagination
 			</value>
 		</property>
 		<property name="plugins">
 			<ref bean="pageInterceptor" />
 		</property>
 	</bean>
-	<bean id="pageInterceptor" class="com.mscncn.firstsystem.common.mybatis.pagination.PageInterceptor">
+	<bean id="pageInterceptor" class="com.mscncn.portal.common.mybatis.pagination.PageInterceptor">
 		<property name="iStrategy" ref="mysqlStrategy"></property>
 	</bean>
-	<bean id="mysqlStrategy" class="com.mscncn.firstsystem.common.mybatis.pagination.MySQLStrategy"></bean>
+	<bean id="mysqlStrategy" class="com.mscncn.portal.common.mybatis.pagination.MySQLStrategy"></bean>
 	<!-- mybatis自动映射 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.mscncn.firstsystem.**.dao" />
+		<property name="basePackage" value="com.mscncn.portal.**.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />	
 	</bean>
 	<!-- 事务管理器 -->
@@ -71,7 +71,7 @@
 		</tx:attributes>
 	</tx:advice>
 	<aop:config proxy-target-class="true">
-		<aop:pointcut expression="(execution(* com.mscncn.firstsystem.**.service..*.*(..)))" id="targetPointcut"/>
+		<aop:pointcut expression="(execution(* com.mscncn.portal.**.service..*.*(..)))" id="targetPointcut"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="targetPointcut" />
 	</aop:config>
 </beans>
