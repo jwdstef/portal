@@ -79,13 +79,14 @@ public class UserServiceImplTest extends SpringTestBase {
 	@Test
 	public void updateTest(){
 		UserDetail user=new UserDetail();
-		user.setUserId(2+"");
-		user.setUserName("sysadmin");
-		user.setRealName("sss111223d");
-		user.setEmail("pwpw12111@ww.cm");
+		user.setUserId(4+"");
+		user.setUserName("test_000002");
+		user.setRealName("test_000002");
+		user.setEmail("11111@qq.cm");
 		//user.setSalt("zssss");
 		//user.setPassword("222");
-		user.setPhone("123456111666");
+		user.setPhone("test_000002");
+		user.setLocked(false);
 		userService.update(user);
 		
 	}

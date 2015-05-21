@@ -68,6 +68,7 @@
 			t.user_id as userId,
 			t.username as userName,
 			t.locked as locked,
+			t.salt as salt,
 			d.real_name as realName,
 	        d.email as email,
 	        d.phone as phone,
@@ -104,14 +105,18 @@
 	</update>
 	<update id="update" parameterType="UserDetail">
 		update s_user 
-		<set>
-			<if test="password!=null and password!=''">
-				password=#{password},
-			</if>
-			<if test="locked!=null and locked!=''">
-				locked=#{locked},
-			</if>
-		</set>
-		where user_id=#{userId}
+			<set>
+				<if test="password!=null and password!=''">
+					password=#{password},
+				</if>
+				<if test="locked!=null">
+					locked=#{locked}
+				</if>
+			</set>  
+			<where>
+				<if test="userId!=null">
+					user_id=#{userId}
+				</if>
+			</where>
 	</update>
 </mapper>

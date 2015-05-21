@@ -84,6 +84,8 @@ $(function() {
 				}else{
 					$("#userDeditDialog").dialog({title:'用户修改页面'}).dialog('open');
 					$("#userId").val(rows[0].userId);
+					$("#salt").val(rows[0].salt);
+					alert(rows[0].salt);
 					$("#locked").combobox("setValue",rows[0].locked)
 					console.log(rows[0].userId);
 					$("#userName").val(rows[0].userName);
@@ -91,6 +93,7 @@ $(function() {
 					$("#realName").val(rows[0].realName);
 					$("#email").val(rows[0].email);
 					$("#phone").val(rows[0].phone);
+					
 					initUpdateDialog();
 				}
 			}

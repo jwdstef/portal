@@ -55,6 +55,7 @@
 						<td class="label_right">
 							<input type="text" id="userName" name="userName" />
 							<input  type="hidden" id="userId" name="userId" />
+							<input type="hidden" id="salt" name="salt">
 							</td>
 						<td class="label_left">&nbsp;* 是否锁定:</td>
 						<td class="label_right">
