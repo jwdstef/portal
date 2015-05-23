@@ -89,13 +89,13 @@ public class UserController {
 	@RequestMapping(value = { "/reSetPwd" }, method = RequestMethod.POST)
 	@ResponseBody
 	public Object reSetPwd(User user) {
+		System.out.println(user);
 		userService.reSetPassword(user);
 		return "success";
 	}
 	@RequestMapping(value = { "/update" }, method = RequestMethod.POST)
 	@ResponseBody
 	public Object update(UserDetail user) {
-		System.out.println(user);
 		userService.update(user);
 		return "success";
 	}
