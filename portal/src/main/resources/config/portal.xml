@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<global>
+	</global>
+	<model>
+		<user>
+			<defalut>
+				<!-- 系统管理员重置默认密码 -->
+				<password>88888888</password>
+			</defalut>
+		</user>
+	</model>
+</root>
