@@ -1,6 +1,11 @@
 package com.mscncn.portal.user.model;
 
 import java.io.Serializable;
+import java.sql.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.mscncn.portal.system.role.model.Role;
 
 /**
  * 
@@ -13,7 +18,7 @@ import java.io.Serializable;
  */
 /**
  * 
- * 类名称: User 类描述: TODO
+ * 类名称: User 类描述: 用户信息表
  * 
  * @author King-Pan
  * @date 2015年3月4日
@@ -34,11 +39,82 @@ public class User implements Serializable {
 	 */
 	private String password;
 	/**
-	 * 密码加密方式
+	 * 密码加密盐
 	 */
 	private String salt;
 
 	private Boolean locked;
+	
+	/**
+	 * 真实姓名
+	 */
+	private String realName;
+	/**
+	 * 邮箱
+	 */
+	private String email;
+	/**
+	 * 电话
+	 */
+	private String phone;
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
+	/**
+	 * 最后登录时间
+	 */
+	private Date lastLoginTime;
+	
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getLastLoginTime() {
+		return lastLoginTime;
+	}
+
+	public void setLastLoginTime(Date lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
+
+	private Set<Role> roles=new HashSet<Role>();
+
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
 	public Boolean getLocked() {
 		return locked;
@@ -84,7 +160,9 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [userId=" + userId + ", userName=" + userName
 				+ ", password=" + password + ", salt=" + salt + ", locked="
-				+ locked + "]";
-	}
+				+ locked + ", realName=" + realName + ", email=" + email
+				+ ", phone=" + phone + ", createTime=" + createTime
+				+ ", lastLoginTime=" + lastLoginTime + ", roles=" + roles + "]";
+	}	
 
 }

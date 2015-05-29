@@ -1,10 +1,16 @@
 package com.mscncn.portal.user.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.log4j.Logger;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -16,7 +22,6 @@ import com.mscncn.portal.common.mybatis.pagination.Pagination;
 import com.mscncn.portal.user.dao.UserDao;
 import com.mscncn.portal.user.dao.UserDetailDao;
 import com.mscncn.portal.user.model.User;
-import com.mscncn.portal.user.model.UserDetail;
 import com.mscncn.portal.user.service.UserService;
 
 @Service
@@ -31,19 +36,17 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDetailDao userDetailDao;
 
-	public UserDetail findUserByName(String userName) {
+	public User findUserByName(String userName) {
 		return userDao.findUserByName(userName);
 	}
 
 	public void saveUser(User user) {
-		user.setUserId(userDao.getId() + "");
 		PasswordHelper.encryptPassword(user);
 		userDao.save(user);
 	}
 
-	public void saveUserDetail(UserDetail detail) {
+	public void saveUserDetail(User detail) {
 		saveUser(detail);
-		userDetailDao.save(detail);
 	}
 
 	public Set<String> findRoles(String userName) {
@@ -55,24 +58,15 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public GridDataBean<UserDetail> pageList(Pagination<UserDetail> pagination) {
-		GridDataBean<UserDetail> bean = null;
-		List<UserDetail> rows = userDao.getList(pagination);
+	public GridDataBean<User> pageList(Pagination<User> pagination) {
+		GridDataBean<User> bean = null;
+		List<User> rows = userDao.getList(pagination);
 		if (CollectionUtils.isNotEmpty(rows)) {
-			bean = new GridDataBean<UserDetail>();
+			bean = new GridDataBean<User>();
 			bean.setRows(rows);
 			bean.setTotal(pagination.getTotalRecord());
 		}
 		return bean;
-	}
-
-	@Override
-	public UserDetail getUserDetailById(Integer id) {
-		if (null == id) {
-			LOGGER.info("the param id is null");
-			return null;
-		}
-		return userDao.getUserById(id);
 	}
 
 	@Override
@@ -88,12 +82,30 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void update(UserDetail userDetail) {
+	public void update(User userDetail) {
 		if (!StringUtils.isEmpty(userDetail.getPassword())) {
 			PasswordHelper.reSetPassword(userDetail);
 		}
 		userDao.update(userDetail);
-		userDetailDao.update(userDetail);
+	}
+
+	@Override
+	public Map<String, Object> login(User user) {
+		Map<String, Object> result = new HashMap<String, Object>();
+		try {
+			Subject currentUser = SecurityUtils.getSubject();
+			UsernamePasswordToken token = new UsernamePasswordToken(
+					user.getUserName(), user.getPassword());
+			currentUser.login(token);
+			user = userDao.findUserByName(user.getUserName());
+			result.put("success", true);
+			userDao.updateLoginTime(user.getUserId());
+		} catch (AuthenticationException e) {
+			LOGGER.error("用户账号密码错误", e);
+			result.put("success", false);
+			result.put("errorMsg", "用户账号密码错误");
+		}
+		return result;
 	}
 
 }

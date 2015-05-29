@@ -6,29 +6,28 @@
 <mapper namespace="com.mscncn.portal.user.dao.UserDao"> 
 	<insert id="save" parameterType="User">
 		insert into
-		s_user(user_id,username,password,salt,locked)
-		values(#{userId},#{userName},#{password},#{salt},#{locked})
+			s_user(username,password,salt,locked,real_name,email,phone,create_time)
+		values(#{userName},#{password},#{salt},#{locked},#{realName},#{email},#{phone},now())
 	</insert>
-	<select id="getId" resultType="int" >
-		select max(user_id)+1 from s_user
-	</select>
-	<select id="findUserByName" resultType="UserDetail" parameterType="java.lang.String">
+	<select id="findUserByName" resultType="User" parameterType="java.lang.String">
 		select 
 			t.user_id as userId,
 			t.username as userName,
 			t.password as password,
 			t.salt as salt,
 			t.locked as locked,
-			d.real_name as realName,
-	        d.email as email,
-	        d.phone as phone,
-	        d.create_time as createTime,
-	        d.last_login_time as lastLoginTime
-		from s_user t,s_user_detail d 
-		where t.user_id=d.user_id  
-		<if test="userName!=null and userName!=''">
-			and username=#{userName}
-		</if>
+			t.real_name as realName,
+	        t.email as email,
+	        t.phone as phone,
+	        t.create_time as createTime,
+	        t.last_login_time as lastLoginTime
+		from s_user t
+		<where>
+			<if test="userName!=null and userName!=''">
+				 username=#{userName}
+			</if>
+		</where> 
+		
 	</select>
 	<select id="findRolesByUserName" parameterType="java.lang.String"
 		resultType="java.util.Set">
@@ -63,36 +62,36 @@
 			and r.resources_id = rs.resources_id
 	</select>
 	<select id="getList" parameterType="Pagination"
-		resultType="UserDetail">
+		resultType="User">
 		select 
 			t.user_id as userId,
 			t.username as userName,
 			t.locked as locked,
 			t.salt as salt,
-			d.real_name as realName,
-	        d.email as email,
-	        d.phone as phone,
-	        d.create_time as createTime,
-	        d.last_login_time as lastLoginTime
-		from s_user t,s_user_detail d 
-		where t.user_id=d.user_id
+			t.real_name as realName,
+	        t.email as email,
+	        t.phone as phone,
+	        t.create_time as createTime,
+	        t.last_login_time as lastLoginTime
+		from s_user t
 	</select>
 	<select id="getUserById" parameterType="java.lang.Integer"
-		resultType="UserDetail">
+		resultType="User">
 		select 
 			t.user_id as userId,
 			t.username as userName,
 			t.locked as locked,
-			d.real_name as realName,
-	        d.email as email,
-	        d.phone as phone,
-	        d.create_time as createTime,
-	        d.last_login_time as lastLoginTime
-		from s_user t,s_user_detail d 
-		where t.user_id=d.user_id 
-    	<if test="id!=null">
-    		and t.user_id=#{id}
-    	</if>
+			t.real_name as realName,
+	        t.email as email,
+	        t.phone as phone,
+	        t.create_time as createTime,
+	        t.last_login_time as lastLoginTime
+		from s_user t
+		<where>
+			<if test="id!=null">
+    			t.user_id=#{id}
+    		</if>
+		</where>
 	</select>
 	<delete id="deleteUser" parameterType="java.lang.String">
 		delete from s_user where user_id in 
@@ -100,17 +99,29 @@
 			#{id}
 		</foreach>
 	</delete>
-	<update id="reSetPassword" parameterType="UserDetail">
+	<update id="reSetPassword" parameterType="User">
 		update s_user set password=#{password} where user_id=#{userId}
 	</update>
-	<update id="update" parameterType="UserDetail">
+	<update id="updateLoginTime" parameterType="java.lang.String">
+		update s_user set last_login_time=now() where user_id=#{userId}
+	</update>
+	<update id="update" parameterType="User">
 		update s_user 
 			<set>
 				<if test="password!=null and password!=''">
 					password=#{password},
 				</if>
 				<if test="locked!=null">
-					locked=#{locked}
+					locked=#{locked},
+				</if>
+				<if test="realName!=null and realName!=''">
+					real_name=#{realName},
+				</if>
+				<if test="email!=null and email!=''">
+					email=#{email},
+				</if>
+				<if test="phone!=null and phone!=''">
+					phone=#{phone}
 				</if>
 			</set>  
 			<where>

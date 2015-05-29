@@ -7,7 +7,6 @@ import org.apache.ibatis.annotations.Param;
 
 import com.mscncn.portal.common.mybatis.pagination.Pagination;
 import com.mscncn.portal.user.model.User;
-import com.mscncn.portal.user.model.UserDetail;
 
 public interface UserDao {
 
@@ -15,20 +14,20 @@ public interface UserDao {
 
 	void deleteUser(String[] userIds);
 
-	Integer getId();
-
 	void reSetPassword(User user);
 
-	void update(UserDetail userDetail);
+	void update(User user);
 
-	UserDetail findUserByName(@Param("userName") String userName);
+	User findUserByName(@Param("userName") String userName);
 
 	Set<String> findRolesByUserName(@Param("userName") String userName);
 
 	Set<String> findResourcesByUserName(@Param("userName") String userName);
 
-	List<UserDetail> getList(Pagination<UserDetail> pagination);
+	List<User> getList(Pagination<User> pagination);
 
-	UserDetail getUserById(@Param("id") Integer id);
+	User getUserById(@Param("id") String id);
+
+	void updateLoginTime(@Param("id") String id);
 
 }

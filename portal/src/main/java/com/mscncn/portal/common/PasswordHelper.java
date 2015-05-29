@@ -20,11 +20,10 @@ public class PasswordHelper {
 	private static final RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
 	private static final String algorithmName = "md5";
 	private static final int hashIterations = 2;
-	private static final String DEFAULT_PWD = "88888888";
+	private static String DEFAULT_PWD = "88888888";
 
 	public static void encryptPassword(User user) {
-		user.setSalt(user.getUserName()
-				+ randomNumberGenerator.nextBytes().toHex());
+		user.setSalt(randomNumberGenerator.nextBytes().toHex());
 		String newPassword = new SimpleHash(algorithmName, user.getPassword(),
 				ByteSource.Util.bytes(user.getSalt()), hashIterations).toHex();
 		user.setPassword(newPassword);

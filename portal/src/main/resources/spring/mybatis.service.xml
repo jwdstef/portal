@@ -10,9 +10,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<!-- aliyun mysql -->
-		<!--  
-		<property name="url" value="jdbc:mysql://rdsufznaqufznaq.mysql.rds.aliyuncs.com:3306/firstsystem" />  -->
-		<property name="url" value="jdbc:mysql://127.0.0.1:3306/firstsystem" />
+		<!--
+		<property name="url" value="jdbc:mysql://rdsufznaqufznaq.mysql.rds.aliyuncs.com:3306/firstsystem" /> -->
+		 <property name="url" value="jdbc:mysql://127.0.0.1:3306/firstsystem" /> 
         <property name="username" value="firstsystem" />  
         <property name="password" value="firstsystem123456" />  
         <property name="maxActive" value="20" />  
@@ -39,6 +39,7 @@
 				com.mscncn.portal.user.model;
 				com.mscncn.portal.dict.model;
 				com.mscncn.portal.menu.model;
+				com.mscncn.portal.system.role.model;
 				com.mscncn.portal.common.mybatis.pagination
 			</value>
 		</property>

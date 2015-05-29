@@ -25,49 +25,35 @@ public class UserServiceImplTest extends SpringTestBase {
 	}
 
 	@Test
-	public void testSaveUserDetail() {
-		UserDetail user = new UserDetail();
+	public void testSaveUser() {
+		User user = new User();
 		user.setUserName("sysadmin");
 		user.setPassword("222222");
 		user.setEmail("pwpw12111@ww.cm");
 		user.setLocked(false);
 		userService.saveUserDetail(user);
 		System.out.println(ByteSource.Util
-				.bytes("sysadmin855e4bf810581f256b8a60b98f2aadb0"));
+				.bytes("855e4bf810581f256b8a60b98f2aadb0"));
 		String newPassword = new SimpleHash("md5", "222222",
 				ByteSource.Util
-						.bytes("sysadmin855e4bf810581f256b8a60b98f2aadb0"), 2)
+						.bytes("855e4bf810581f256b8a60b98f2aadb0"), 2)
 				.toHex();
 		System.out.println(newPassword);
 	}
 
 	@Test
 	public void pageListTest() {
-		Pagination<UserDetail> pagination = new Pagination<UserDetail>();
+		Pagination<User> pagination = new Pagination<User>();
 		pagination.setPageNo(1);
 		pagination.setPageSize(5);
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("user_id", 11);
 		pagination.setParams(params);
-		GridDataBean<UserDetail> bean = userService.pageList(pagination);
+		GridDataBean<User> bean = userService.pageList(pagination);
 		System.out.println(bean);
 		Assert.assertSame(bean.getRows().size(), 2);
 	}
 
-	@Test
-	public void getUserDetailTest() {
-		UserDetail detail = userService.getUserDetailById(1);
-		System.out.println(detail);
-		Assert.assertNotNull(detail);
-
-	}
-
-	@Test
-	public void getUserDetailTestNull() {
-		UserDetail detail = userService.getUserDetailById(null);
-		System.out.println(detail);
-		Assert.assertNull(detail);
-	}
 
 	@Test
 	public void reSetPasswdTest() {
