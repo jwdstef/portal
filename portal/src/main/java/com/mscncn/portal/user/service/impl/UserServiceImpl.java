@@ -20,7 +20,6 @@ import com.mscncn.portal.common.PasswordHelper;
 import com.mscncn.portal.common.grid.GridDataBean;
 import com.mscncn.portal.common.mybatis.pagination.Pagination;
 import com.mscncn.portal.user.dao.UserDao;
-import com.mscncn.portal.user.dao.UserDetailDao;
 import com.mscncn.portal.user.model.User;
 import com.mscncn.portal.user.service.UserService;
 
@@ -33,8 +32,6 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDao userDao;
 
-	@Autowired
-	private UserDetailDao userDetailDao;
 
 	public User findUserByName(String userName) {
 		return userDao.findUserByName(userName);
@@ -72,7 +69,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void deleteUser(String[] userIds) {
 		userDao.deleteUser(userIds);
-		userDetailDao.deleteUserDetail(userIds);
 	}
 
 	@Override

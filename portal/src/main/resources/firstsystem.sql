@@ -108,41 +108,31 @@ INSERT INTO `s_role_resources` VALUES ('1', '1');
 -- ----------------------------
 -- Table structure for `s_user`
 -- ----------------------------
-DROP TABLE IF EXISTS `s_user`;
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS  `s_user`;
 CREATE TABLE `s_user` (
   `user_id` int(18) NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) DEFAULT NULL,
+  `username` varchar(50) NOT NULL,
   `password` varchar(200) NOT NULL,
-  `salt` varchar(50) DEFAULT NULL,
-  `locked` int(1) DEFAULT NULL,
+  `salt` varchar(50) NOT NULL,
+  `locked` int(1) NOT NULL,
+  `real_name` varchar(200) DEFAULT NULL COMMENT '真实姓名',
+  `email` varchar(100) DEFAULT NULL COMMENT '邮箱',
+  `phone` varchar(20) DEFAULT NULL COMMENT '电话',
+  `create_time` datetime DEFAULT null COMMENT '创建时间',
+  `last_login_time` datetime DEFAULT NULL COMMENT '最后登录时间',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
 
 -- ----------------------------
 -- Records of s_user
 -- ----------------------------
-INSERT INTO `s_user` VALUES ('1', 'admin', 'admin', 'md5', '0');
-INSERT INTO `s_user` VALUES ('2', 'sysadmin', '3fdfb9751eda287ddde9e3726b893f86', 'sysadmin855e4bf810581f256b8a60b98f2aadb0', '0');
--- ----------------------------
--- Table structure for `s_user_detail`
--- ----------------------------
-DROP TABLE IF EXISTS `s_user_detail`;
-CREATE TABLE `s_user_detail` (
-  `user_id` int(18) NOT NULL COMMENT '用户id与s_user.user_id关联',
-  `real_name` varchar(100) COLLATE utf8_bin DEFAULT NULL COMMENT '真实名字',
-  `email` varchar(200) COLLATE utf8_bin NOT NULL COMMENT '邮箱',
-  `phone` varchar(15) COLLATE utf8_bin DEFAULT NULL COMMENT '电话号码',
-  `create_time` datatime  COMMENT '创建时间',
-  `last_login_time` datatime  COMMENT '最后登录时间'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
--- ----------------------------
--- Records of s_user_detail
--- ----------------------------
-INSERT INTO `s_user_detail` VALUES ('1', 'king', 'pwpw1218@126.com', '18171204445', '2015-03-21 22:10:38', null);
-INSERT INTO `s_user_detail` VALUES ('2', '1111111111', '24@1.c', '11223333', '2015-04-27 23:28:56', null);
-
+insert into `s_user`(`user_id`,`username`,`password`,`salt`,`locked`,`real_name`,`email`,`phone`,`create_time`,`last_login_time`) values
+('1','admin','ef94fdb7001fce2c97bf8020899a6b65','md5','0',null,null,null,'2015-05-25 21:11:15',null),
+('2','sysadmin','3fdfb9751eda287ddde9e3726b893f86','sysadmin855e4bf810581f256b8a60b98f2aadb0','0',null,null,null,'2015-05-25 21:11:15',null);
+SET FOREIGN_KEY_CHECKS = 1;
 -- ----------------------------
 -- Table structure for `s_user_role`
 -- ----------------------------
