@@ -5,11 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath }/resources/easyui/themes/default/easyui.css">
+	href="${pageContext.request.contextPath }/resources/easyui/themes/bootstrap/easyui.css">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/resources/easyui/themes/icon.css">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath }/resources/css/basic/common.css">
 <script type="text/javascript"
 	src="${pageContext.request.contextPath }/resources/easyui/jquery.min.js"></script>
 <script type="text/javascript"

@@ -177,6 +177,9 @@ function initUpdateDialog() {
 		required : false,
 		validType : "equals['#password']"
 	});
+	$("#phone").validatebox({
+		validType:"mobile"
+	});
 	$('#userSaveForm').form({
 		url : '../user/update',
 		type : 'post',

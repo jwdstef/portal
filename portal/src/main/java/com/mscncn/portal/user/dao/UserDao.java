@@ -28,6 +28,6 @@ public interface UserDao {
 
 	User getUserById(@Param("id") String id);
 
-	void updateLoginTime(@Param("id") String id);
+	void updateLoginTime(@Param("userId") String id);
 
 }
