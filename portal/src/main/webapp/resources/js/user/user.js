@@ -11,6 +11,8 @@ $(function() {
 	$("#userDataGrid").datagrid({
 		url : '../user/',
 		method : 'post',
+		idField:'userId',
+		loadMsg:'用户信息正在加载请稍等......',
 		pagination : true,
 		rownumbers : true,
 		columns : [ [ {
@@ -119,7 +121,7 @@ $(function() {
 					});
 				}
 			}
-		} ]
+		}]
 	});
 	// 初始化用戶user弹出框
 	$("#userDeditDialog").dialog({
@@ -217,5 +219,7 @@ function initDialog() {
 	$("#email").validatebox({
 		validType : 'email'
 	});
-
+}
+function queryByUserName(){
+	
 }

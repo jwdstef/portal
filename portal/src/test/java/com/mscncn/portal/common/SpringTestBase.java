@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:spring/*.service.xml" })
 @Transactional
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false)
+@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
 public class SpringTestBase extends
 		AbstractTransactionalJUnit4SpringContextTests {
 	@Test

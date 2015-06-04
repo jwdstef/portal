@@ -12,7 +12,7 @@
 		<!-- aliyun mysql -->
 		<!--
 		<property name="url" value="jdbc:mysql://rdsufznaqufznaq.mysql.rds.aliyuncs.com:3306/firstsystem" /> -->
-		 <property name="url" value="jdbc:mysql://127.0.0.1:3306/firstsystem" /> 
+		 <property name="url" value="jdbc:mysql://127.0.0.1:3306/firstsystem?useUnicode=true&amp;characterEncoding=utf-8" /> 
         <property name="username" value="firstsystem" />  
         <property name="password" value="firstsystem123456" />  
         <property name="maxActive" value="20" />  

@@ -16,7 +16,7 @@ import com.mscncn.portal.user.service.UserService;
 @RequestMapping("/user")
 public class UserController {
 
-	private static Logger logger = Logger.getLogger(UserController.class);
+	private static final Logger LOGGER = Logger.getLogger(UserController.class);
 	@Autowired
 	private UserService userService;
 
