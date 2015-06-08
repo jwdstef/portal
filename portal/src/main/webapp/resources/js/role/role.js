@@ -13,8 +13,7 @@ $(function() {
 		},{
 			field : 'roleId',
 			title : '角色ID',
-			hidden : true,
-			width : 100
+			hidden : true
 		},{
 			field:'roleName',
 			title:'角色名称',
